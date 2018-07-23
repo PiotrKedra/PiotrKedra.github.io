@@ -15,7 +15,7 @@ html{
 
 body{
     background: #ccc;
-    margin: 0;
+    margin: 10px;
     line-height: 1.4; 
 }
 
@@ -196,5 +196,9 @@ footer{
         grid-template-areas: 'showcase'
         'top-box-a'
         'top-box-b';
+    }
+    
+    html{
+        margin: 2px;
     }
 }
