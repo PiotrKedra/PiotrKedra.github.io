@@ -33,6 +33,13 @@ body{
     grid-template-columns: 1fr 1fr;
 }
 
+.menu h1{
+    color: var(--light);
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    white-space: nowrap;
+}
+
 .menu nav{
     padding-right: 1rem;
 }
@@ -45,17 +52,24 @@ body{
 
 }
 
-.menu h1{
-    color: var(--light);
-    font-size: 1.4rem;
-    margin-left: 2rem;
-    white-space: nowrap;
-}
-
 .main_nav a{
+    display: inline-block;
     text-decoration: none;
     font-size: 1.4rem;
     color: var(--light);
+}
+
+.main_nav a:after{
+    content: '';
+    width: 0;
+    height: 1px;
+    display: block;
+    background: white;
+    transition: 500ms;
+}
+
+.main_nav a:hover:after{
+    width: 100%
 }
 
 /*intro with logo*/
@@ -63,6 +77,10 @@ body{
 .intro{
     display: grid;
     justify-items: center;
+}
+
+.intro img{
+    padding: 1rem;
 }
 
 .intro_text{
