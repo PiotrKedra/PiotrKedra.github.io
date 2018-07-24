@@ -1,87 +1,90 @@
 /*css variables*/
-
 :root{
     --primary: #ddd;
     --dark: #333;
     --light: #fff;
     --shadow: 0 1px 5px rgba(104,104,104,0.8);
 }
+
 html{
     font-family: 'Open Sans', sans-serif;
 }
 
 body{
     margin: 0;
+    padding: 0;
 }
 
 .wrapper{
     display: grid;
-    grid-gap: 20px;
 }
 
 .top{
     background-image: url('images/baz-rdy-2.png');
     display: grid;
-    grid-gap: 20px;
     background-size: cover;
     background-position: center;
+}
 
+/*main menu*/
 
-    
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu nav{
+    padding-right: 1rem;
 }
 
 .menu nav ul{
     list-style: none;
     display: grid;
-    grid-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
 
 }
 
-.menu{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-}
-
-.menu p{
+.menu h1{
     color: var(--light);
-    font-size: 2rem;
-    padding: 0 0.5rem 1rem 1rem;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    white-space: nowrap;
 }
-.main_nav{
-    padding-top: 1rem;
-    
-}
+
 .main_nav a{
     text-decoration: none;
     font-size: 1.4rem;
     color: var(--light);
-    padding: 1rem;
-
 }
+
+/*intro with logo*/
 
 .intro{
     display: grid;
     justify-items: center;
 }
 
-.intro p{
-    color: var(--light);
-    font-size: 1.5rem;
-    padding: 0 4rem;
-    text-align: justify;
-}
 .intro_text{
     width: 80%;
+    margin-bottom: 2rem;
+}
 
+.intro p{
+    color: var(--light);
+    font-size: 1.3rem;
+    padding: 0 4rem;
+    text-align: justify;
+/*    font-weight: bold;*/
 }
 
 .intro_text hr{
-    height: 5px;
+    height: 2px;
     background-color: white;
     border: none;
 }
+
+/*main content*/
 
 .content{
     display: grid;
