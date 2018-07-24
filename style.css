@@ -1,7 +1,120 @@
 /*css variables*/
+
 :root{
     --primary: #ddd;
     --dark: #333;
     --light: #fff;
     --shadow: 0 1px 5px rgba(104,104,104,0.8);
+}
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+}
+
+.top{
+    background-image: url('images/baz-rdy-2.png');
+    display: grid;
+    grid-gap: 20px;
+    background-size: cover;
+    background-position: center;
+
+
+    
+}
+
+.menu nav ul{
+    list-style: none;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.menu p{
+    color: var(--light);
+    font-size: 2rem;
+    padding: 0 0.5rem 1rem 1rem;
+}
+.main_nav{
+    padding-top: 1rem;
+    
+}
+.main_nav a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--light);
+    padding: 1rem;
+
+}
+
+.intro{
+    display: grid;
+    justify-items: center;
+}
+
+.intro p{
+    color: var(--light);
+    font-size: 1.5rem;
+    padding: 0 4rem;
+    text-align: justify;
+}
+.intro_text{
+    width: 80%;
+
+}
+
+.intro_text hr{
+    height: 5px;
+    background-color: white;
+    border: none;
+}
+
+.content{
+    display: grid;
+    grid-template-areas: 'a' 'b' 'c';
+}
+
+.a{
+    grid-area: a;
+    display: grid;
+    grid-template-areas: 'header header' 'p img';
+
+}
+
+.header{
+    grid-area: header;
+    padding: 1rem;
+}
+
+.a p{
+    grid-area: p;
+    text-align: justify;
+    padding: 1rem;
+}
+
+.a img{
+    grid-area: img;
+}
+
+
+@media(max-width: 700px){
+    .a{
+        grid-area: a;
+        display: grid;
+        grid-template-areas: 'header' 'p' 'img';
+    }
 }
