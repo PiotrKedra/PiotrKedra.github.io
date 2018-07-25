@@ -244,9 +244,25 @@ footer span p{
 
 
 @media(max-width: 700px){
-    .a{
-        grid-area: a;
+    .content-a{
+        grid-area: content-a;
         display: grid;
-        grid-template-areas: 'header' 'p' 'img';
+        grid-template-areas: 'header-a' 'p-a' 'img-a';
+    }
+    
+    .content-b{
+        grid-area: content-b;
+        display: grid;
+        grid-template-areas: 'header-b' 'p-b' 'img-b';
+    }
+    
+    .content-c{
+        grid-area: content-c;
+        display: grid;
+        grid-template-areas: 'header-c' 'p-c' 'img-c';
+    }
+    
+    .content img{
+        width: 100%;
     }
 }
