@@ -243,7 +243,7 @@ footer span p{
 
 
 
-@media(max-width: 700px){
+@media(max-width: 900px){
     .content-a{
         grid-area: content-a;
         display: grid;
@@ -264,5 +264,9 @@ footer span p{
     
     .content img{
         width: 100%;
+    }
+    
+    .content p{
+        padding: 0;
     }
 }
