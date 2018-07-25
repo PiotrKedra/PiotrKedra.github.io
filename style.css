@@ -1,9 +1,10 @@
 /*css variables*/
 :root{
-    --primary: #ddd;
-    --dark: #333;
+    --primary: #efffff;
     --light: #fff;
     --shadow: 0 1px 5px rgba(104,104,104,0.8);
+    --text-shadow: 0 0 1px rgba(255,255,255,1);
+    --content-shadow: 0 0 2px rgba(0,0,0,1);
 }
 
 html{
@@ -13,6 +14,7 @@ html{
 body{
     margin: 0;
     padding: 0;
+    background-color: var(--primary);
 }
 
 .wrapper{
@@ -38,6 +40,7 @@ body{
     font-size: 1.4rem;
     margin-left: 2rem;
     white-space: nowrap;
+    text-shadow: var(--text-shadow);
 }
 
 .menu nav{
@@ -57,19 +60,20 @@ body{
     text-decoration: none;
     font-size: 1.4rem;
     color: var(--light);
+    text-shadow: var(--text-shadow);
 }
 
 .main_nav a:after{
     content: '';
     width: 0;
-    height: 1px;
+    height: 1.2px;
     display: block;
     background: white;
-    transition: 500ms;
+    transition: 500ms ease-in-out;
 }
 
 .main_nav a:hover:after{
-    width: 100%
+    width: 100%;
 }
 
 /*intro with logo*/
@@ -94,7 +98,7 @@ body{
     font-size: 1.3rem;
     padding: 0 4rem;
     text-align: justify;
-/*    font-weight: bold;*/
+    text-shadow: var(--text-shadow);
 }
 
 .intro_text hr{
@@ -107,30 +111,136 @@ body{
 
 .content{
     display: grid;
-    grid-template-areas: 'a' 'b' 'c';
+    grid-template-areas: 'content-a' 'content-b' 'content-c';
+    grid-gap: 2rem;
+    padding: 3rem 12.5%;
 }
 
-.a{
-    grid-area: a;
+.content img{
+    width: 300px;
+    box-shadow: var(--shadow);
+}
+
+.content header{
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/*content a*/
+
+.content-a{
+    grid-area: content-a;
     display: grid;
-    grid-template-areas: 'header header' 'p img';
-
+    grid-template-areas: 'header-a header-a' 'p-a img-a'; 
 }
 
-.header{
-    grid-area: header;
-    padding: 1rem;
+.content-a header{
+    grid-area: header-a;
 }
 
-.a p{
-    grid-area: p;
+.content-a p{
+    grid-area: p-a;
     text-align: justify;
-    padding: 1rem;
+    padding-right: 2rem;
 }
 
-.a img{
-    grid-area: img;
+.content-a img{
+    grid-area: img-a;
+    padding-top: 1rem;
 }
+
+/*content b*/
+
+.content-b{
+    grid-area: content-b;
+    display: grid;
+    grid-template-areas: 'header-b header-b' 'img-b p-b'; 
+}
+
+.content-b header{
+    grid-area: header-b;
+}
+
+.content-b p{
+    grid-area: p-b;
+    text-align: justify;
+    padding-left: 2rem;
+}
+
+.content-b img{
+    grid-area: img-b;
+    padding-top: 1rem;
+}
+
+/*content c*/
+
+.content-c{
+    grid-area: content-c;
+    display: grid;
+    grid-template-areas: 'header-c header-c' 'p-c img-c'; 
+}
+
+.content-c header{
+    grid-area: header-c;
+}
+
+.content-c p{
+    grid-area: p-c;
+    text-align: justify;
+    padding-right: 2rem;
+}
+
+.content-c img{
+    grid-area: img-c;
+    padding-top: 1rem;
+}
+
+/*footer*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+footer div{
+    background-color: #666;
+    justify-items: center;
+    display: grid;
+}
+
+.footer-nav{
+    width: 60%;
+}
+
+.footer-nav ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    justify-items: center;
+}
+
+.footer-nav ul a{
+    text-decoration: none;
+    color: var(--primary);
+    
+}
+
+/*who done it?*/
+
+footer span{
+    height: 3rem;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+}
+
+footer span p{
+    align-self: center;
+    margin: 0 auto;
+    color: #666;
+}
+
 
 
 @media(max-width: 700px){
