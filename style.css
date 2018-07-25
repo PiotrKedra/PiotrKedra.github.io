@@ -117,8 +117,9 @@ body{
 }
 
 .content img{
-    width: 300px;
+    width: 350px;
     box-shadow: var(--shadow);
+    position: relative;
 }
 
 .content header{
@@ -244,6 +245,13 @@ footer span p{
 
 
 @media(max-width: 900px){
+    .intro_text{
+        width: 90%;
+    }
+    .intro p{
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
     .content-a{
         grid-area: content-a;
         display: grid;
