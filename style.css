@@ -35,7 +35,8 @@ body{
     grid-template-columns: 1fr 1fr;
 }
 
-.menu h1{
+.menu h1 a{
+    text-decoration: none;
     color: var(--light);
     font-size: 1.4rem;
     margin-left: 2rem;

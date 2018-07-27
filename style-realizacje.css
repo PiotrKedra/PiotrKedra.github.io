@@ -8,3 +8,74 @@
 .content div{
     background-color: aqua;
 }
+
+
+:root{
+    --primary: #efffff;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104,104,104,0.8);
+    --text-shadow: 0 0 1px rgba(255,255,255,1);
+    --content-shadow: 0 0 2px rgba(0,0,0,1);
+}
+
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+}
+
+/*////////////////////////////////////////////////////////////////*/
+/*//////////////////////////main menu                             */
+/*////////////////////////////////////////////////////////////////*/
+
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu h1 a{
+    text-decoration: none;
+    color: var(--shadow);
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    white-space: nowrap;
+    text-shadow: var(--text-shadow);
+}
+
+.menu nav{
+    padding-right: 1rem;
+}
+
+.menu nav ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+
+}
+
+.main_nav a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--shadow));
+    text-shadow: var(--text-shadow);
+}
+
+.main_nav a:after{
+    content: '';
+    width: 0;
+    height: 1.2px;
+    display: block;
+    background: white;
+    transition: 500ms ease-in-out;
+}
+
+.main_nav a:hover:after{
+    width: 100%;
+}
