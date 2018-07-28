@@ -72,9 +72,10 @@ body{
     width: 100%;
 }
 
+/*section befor contetn*/
 
 section{
-    margin: 0 10%;
+    margin: 3rem 12.5% 0 12.5%;
 }
 
 section h1{
@@ -87,32 +88,29 @@ section h1{
 .content{
     display: grid;
     text-shadow: var(--text-shadow);
-
-/*
-    grid-template-areas: 'img-a img-b' 'img-c img-d' 'img-e img-e';
-*/
-    grid-template: repeat(3, [row] auto) / repeat(2, [col] auto);
-    margin: 0 5%;
+    grid-template: repeat(3, [row] auto) / repeat(4, [col] auto);
+    margin: 0 12.5%;
+    grid-column-gap: 10%;
 }
 
 .img-a{
-    grid-column: col 1;
+    grid-column: col 1/span 2;
     grid-row: row 1;
 }
 .img-b{
-    grid-column: col 2;
+    grid-column: col 3/span 2;
     grid-row: row 1;
 }
 .img-c{
-    grid-column: col 1;
+    grid-column: col 1/span 2;
     grid-row: row 2;
 }
 .img-d{
-    grid-column: col 2;
+    grid-column: col 3 / span 2;
     grid-row: row 2;
 }
 .img-e{
-    grid-column: col 1 / span 2;
+    grid-column: col 2 / span 2;
     grid-row: row 3;
 }
 
@@ -129,7 +127,7 @@ section h1{
 }
 
 .img{
-    width: 70%;
+    width: 100%;
     padding: 0.5rem;
     background-color: #eee;
     box-shadow: var(--shadow);
@@ -152,7 +150,6 @@ section h1{
     justify-content: center;
     position: relative;
     margin: 2rem 0;
-   
 }
 
 /*footer*/
