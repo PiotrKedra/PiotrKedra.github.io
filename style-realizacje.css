@@ -87,7 +87,6 @@ section h1{
 
 .content{
     display: grid;
-    text-shadow: var(--text-shadow);
     grid-template: repeat(3, [row] auto) / repeat(4, [col] auto);
     margin: 0 12.5%;
     grid-column-gap: 10%;
@@ -114,16 +113,19 @@ section h1{
     grid-row: row 3;
 }
 
-.img-basketball{
+.img-icon{
     position: absolute;
     top: 30%;
     width: 15%;
 }
 
 .content p{
+    width: auto;
     position: absolute;
     top: 60%;
     color: white;
+    font-size: 2vw;
+    font-weight: bold;
 }
 
 .img{
@@ -133,10 +135,10 @@ section h1{
     box-shadow: var(--shadow);
 }
 
-.img-a{
+.img-container{
     filter: brightness(80%);
 }
-.img-a:hover{
+.img-container:hover{
     filter: brightness(100%);
     cursor: pointer;
     
