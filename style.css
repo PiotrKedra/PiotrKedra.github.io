@@ -44,11 +44,12 @@ body{
     text-shadow: var(--text-shadow);
 }
 
-.menu nav{
+.wtf{
+    text-align: right;
     padding-right: 1rem;
 }
 
-.menu nav ul{
+.ul{
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -206,12 +207,11 @@ footer{
 }
 footer div{
     background-color: #666;
-    justify-items: center;
+    justify-items: left;
     display: grid;
 }
 
 .footer-nav{
-    width: 60%;
 }
 
 .footer-nav ul{
@@ -225,6 +225,7 @@ footer div{
 .footer-nav ul a{
     text-decoration: none;
     color: var(--primary);
+    font-size: 1rem;;
     
 }
 
@@ -243,9 +244,53 @@ footer span p{
     color: #666;
 }
 
+label{
+    display: none;
+}
+
+#toggle{
+    display: none;
+}
 
 
-@media(max-width: 900px){
+@media screen and (max-width: 700px){
+    label{
+        width: 100%;
+        display: block;
+        margin-top: 1rem;
+        margin-left: 80%;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .menu h1{
+        width: 70%;
+    }
+    
+    .wtf{
+        display: none;
+        grid-column: 2;
+    }
+    .ul{
+        margin-right: 10%;
+        margin-left: 40%;
+        border-right: 1px solid white;
+        border-top: 1px solid white;
+        text-align: left;
+        display: block;
+        padding-right: 1rem;
+    }
+    
+    .menu nav ul li{
+        padding: 0.3rem 0;
+    }
+    
+    #toggle:checked + .wtf {
+        width: 100%;
+        display: block;
+    }
+    
     .intro_text{
         width: 90%;
     }

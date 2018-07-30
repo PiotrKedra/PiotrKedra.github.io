@@ -9,6 +9,8 @@
 
 html{
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center; 
 }
 
 body{
@@ -22,12 +24,12 @@ body{
 .menu{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-image: url(images/baz-rdy-2.png);
-    background-position: center;
-    background-size: cover;
     margin-bottom: 2rem;
     height: 8rem;
-    
+    background-image: url(images/baz-rdy-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .menu h1 a{
@@ -82,6 +84,7 @@ section h1{
     border-bottom: 1px solid black;
     font-weight: bold;
     font-size: 1.5rem;
+    width: auto;
 }
 /*contetn*/
 
@@ -202,6 +205,16 @@ footer span p{
 @media(max-width: 700px){
     .content{
     display: block;
+    }
+    
+    .content p{
+        font-size: 1.5rem;
+    }
 }
+
+@media(min-width: 1500px){
+    .content p{
+        font-size: 2rem;
+    }
 }
 
