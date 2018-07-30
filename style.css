@@ -208,11 +208,12 @@ footer{
 }
 footer div{
     background-color: #666;
-    justify-items: left;
+    justify-items: center;
     display: grid;
 }
 
 .footer-nav{
+    
 }
 
 .footer-nav ul{
@@ -256,13 +257,13 @@ label{
 
 @media screen and (max-width: 700px){
     label{
-        width: 10%;
         display: block;
+        margin-right: 10%;
         margin-top: 1rem;
-        margin-left: 80%;
         font-size: 2rem;
         color: white;
         cursor: pointer;
+        text-align: right;
     }
     
     .menu h1{
@@ -270,25 +271,27 @@ label{
     }
     
     .wtf{
+        position: absolute;
+        left: -5%;
+        top:4rem;
         display: none;
-        grid-column: 2;
+        background-color: rgba(33,33,33,0.8);
     }
     .ul{
-        margin-right: 10%;
         border-right: 1px solid white;
-        border-top: 1px solid white;
-        text-align: left;
+        text-align: center;
         display: block;
-        padding-right: 1rem;
     }
     
     .menu nav ul li{
+                border-top: 1px solid white;
         padding: 0.3rem 0;
     }
     
     #toggle:checked + .wtf {
         width: 100%;
         display: block;
+
     }
     
     .intro_text{
