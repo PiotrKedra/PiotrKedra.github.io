@@ -202,8 +202,9 @@ body{
 /*footer*/
 
 footer{
-    display: none;
-    flex-direction: column;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 footer div{
     background-color: #666;
@@ -225,7 +226,7 @@ footer div{
 .footer-nav ul a{
     text-decoration: none;
     color: var(--primary);
-    font-size: 1rem;;
+    font-size: 70%;
     
 }
 
@@ -233,14 +234,14 @@ footer div{
 
 footer span{
     height: 3rem;
-    width: 100%;
     background-color: #333;
-    display: none;
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 footer span p{
-    align-self: center;
-    margin: 0 auto;
+    margin: 0.5rem;
     color: #666;
 }
 
@@ -274,7 +275,6 @@ label{
     }
     .ul{
         margin-right: 10%;
-        margin-left: 30%;
         border-right: 1px solid white;
         border-top: 1px solid white;
         text-align: left;
