@@ -129,6 +129,8 @@ body{
     text-shadow: var(--text-shadow);
 }
 
+
+
 .intro_text hr{
     height: 1px;
     background-color: white;
@@ -348,8 +350,13 @@ label{
         width: 90%;
     }
     .intro p{
-        font-size: 1.2rem;
+        font-size: 3.1vw;
         padding: 0 1rem;
+    }
+
+    .content{
+        font-size: 3vw;
+        padding: 3rem 6%;
     }
     .content-a{
         grid-area: content-a;
