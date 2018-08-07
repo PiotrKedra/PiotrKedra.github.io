@@ -7,7 +7,7 @@ window.onload = function(){
 
         var intro_h1 = document.querySelector(".intro .h1");
         
-        if(window.pageYOffset > 30){
+        if(window.pageYOffset > 10){
 
             menu.style.backgroundColor = "rgba(51,51,51,0.8)";
             menu.style.transition = "500ms";

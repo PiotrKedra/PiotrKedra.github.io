@@ -21,6 +21,7 @@ body{
     display: grid;
 }
 
+/* top of the home site */
 .top{
     background-image: url('images/baz-rdy-22.png');
     background-size: cover;
@@ -29,7 +30,6 @@ body{
 }
 
 /*main menu*/
-
 .menu{
     width: 100%;
     display: grid;
@@ -62,7 +62,6 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
-
 }
 
 .main_nav a{
@@ -87,12 +86,12 @@ body{
 }
 
 /*intro with logo*/
-
 .intro{
     margin-top: 4rem;
     display: grid;
     justify-items: center;
     z-index: 10;
+    margin-bottom: 2rem;
 }
 
 .intro .h1{
@@ -129,8 +128,6 @@ body{
     text-shadow: var(--text-shadow);
 }
 
-
-
 .intro_text hr{
     height: 1px;
     background-color: white;
@@ -138,7 +135,6 @@ body{
 }
 
 /*main content*/
-
 .content{
     display: grid;
     grid-template-areas: 'content-a' 'content-b' 'content-c';
@@ -160,7 +156,6 @@ body{
 }
 
 /*content a*/
-
 .content-a{
     grid-area: content-a;
     display: grid;
@@ -182,7 +177,6 @@ body{
 }
 
 /*content b*/
-
 .content-b{
     grid-area: content-b;
     display: grid;
@@ -204,7 +198,6 @@ body{
 }
 
 /*content c*/
-
 .content-c{
     grid-area: content-c;
     display: grid;
@@ -226,7 +219,6 @@ body{
 }
 
 /*footer*/
-
 footer{
     display: block;
     margin: 0;
@@ -236,11 +228,6 @@ footer div{
     background-color: #666;
     justify-items: center;
     display: grid;
-
-}
-
-.footer-nav{
-    
 }
 
 .footer-nav ul{
@@ -252,9 +239,6 @@ footer div{
     padding: 0;
 }
 
-.footer-nav ul li{
-}
-
 .footer-nav ul a{
     text-decoration: none;
     color: var(--primary);
@@ -263,7 +247,6 @@ footer div{
 }
 
 /*who done it?*/
-
 footer span{
     height: 3rem;
     background-color: #333;
@@ -285,9 +268,118 @@ footer span p{
     display: none;
 }
 
+/*######## TOP OF NOT HOME PAGE ########*/
+.top-not-home-page{
+    background-image: url('images/baz-rdy-22.png');
+    background-attachment: fixed;
+    min-height: 15rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*######## REALIZACJE ########*/
+/*section befor content*/
+.realizacje-text{
+    margin: 3rem 12.5% 0 12.5%;
+}
 
+.realizacje-text h1{
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: auto;
+}
+
+/*content realizacje*/
+.realizacje-content{
+    display: grid;
+    grid-template: repeat(3, [row] auto) / repeat(4, [col] auto);
+    margin: 0 12.5%;
+    grid-column-gap: 10%;
+    border: 1px solid red;
+}
+
+.img-a{
+    grid-column: col 1/span 2;
+    grid-row: row 1;
+    border: 1px solid red;
+    column-width: 200px;
+}
+.img-b{
+    grid-column: col 3/span 2;
+    grid-row: row 1;
+}
+.img-c{
+    grid-column: col 1/span 2;
+    grid-row: row 2;
+}
+.img-d{
+    grid-column: col 3 / span 2;
+    grid-row: row 2;
+}
+.img-e{
+    grid-column: col 2 / span 2;
+    grid-row: row 3;
+}
+
+.img-icon{
+    position: absolute;
+    top: 30%;
+    width: 15%;
+}
+
+.realizacje-content p{
+    width: auto;
+    position: absolute;
+    top: 60%;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.img{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #eee;
+    box-shadow: var(--shadow);
+}
+
+.img-container{
+    filter: brightness(80%);
+}
+.img-container:hover{
+    filter: brightness(100%);
+    cursor: pointer;
+    
+}
+
+.realizacje-content div{
+    min-width: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 2rem 0;
+}
+
+/*######## CONTACT ########*/
+/*contact content*/
+.contact-content{
+    margin: 10%;
+}
+
+header{
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: auto;
+}
+
+/* for phone and tablet */
 @media screen and (max-width: 850px){
 
+    /* it's change transparent menu into burger menu above intro (still position; fixed;) */
     .top{
         background-color: #333;
         background-image: none;
@@ -332,6 +424,7 @@ footer span p{
         display: none;
         background-color: rgba(33,33,33,0.8);
     }
+
     .ul{
         text-align: center;
         display: block;
@@ -343,14 +436,14 @@ footer span p{
         width: 100%;
         border-top: 1px solid white;
         padding: 0.5rem 0;
-
     }
     
     #toggle:checked + .wtf {
         width: 100%;
         display: block;
     }
-    
+
+    /* change a bit font size so page look better in intro*/
     .intro_text{
         width: 90%;
     }
@@ -359,6 +452,7 @@ footer span p{
         padding: 0 1rem;
     }
 
+    /* change layout of main contetn in home page */
     .content{
         font-size: 3vw;
         padding: 3rem 6%;
@@ -387,5 +481,18 @@ footer span p{
     
     .content p{
         padding: 0;
+    }
+
+    /*######## REALIZACJE ########*/
+    .realizacje-text p{
+        font-size: 3vw;
+    }
+
+    .realizacje-content{
+        display: block;
+    }
+        
+    .realizacje-content p{
+        font-size: 5vw;
     }
 }

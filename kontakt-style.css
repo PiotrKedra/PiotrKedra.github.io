@@ -18,30 +18,45 @@ body{
     background-color: var(--primary);
 }
 
-/*main menu*/
+.wrapper{
+    display: grid;
+}
 
+/* top of the home site */
+.top-not-home-page{
+    background-image: url('images/baz-rdy-22.png');
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    height: 15rem;
+}
+
+/*main menu*/
 .menu{
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 2rem;
-    height: 8rem;
-    background-image: url(images/baz-rdy-2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu-scrool{
+    background-color: rgba(33,33,33,0.8);
 }
 
 .menu h1 a{
     text-decoration: none;
     color: var(--light);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-left: 2rem;
     white-space: nowrap;
     text-shadow: var(--text-shadow);
+    opacity: 0;
 }
 
-.menu nav{
+.wtf{
     padding-right: 1rem;
+    padding-top: 0.4rem;
 }
 
 .ul{
@@ -49,7 +64,6 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
-
 }
 
 .main_nav a{
@@ -63,7 +77,7 @@ body{
 .main_nav a:after{
     content: '';
     width: 0;
-    height: 1.2px;
+    height: 1px;
     display: block;
     background: white;
     transition: 500ms ease-in-out;

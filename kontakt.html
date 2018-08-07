@@ -1,75 +1,95 @@
 <!DOCTYPE html> 
 <html lang="pl">
 	<head>
-		<meta charset="utf-8"/>
+        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="content-language" content="pl"/>
         
-        <title>mpm project - </title>
-        <link rel="stylesheet" href="kontakt-style.css"/>
+        <title>mpm project - kontakt</title>
+
+        <link rel="stylesheet" href="style.css"/>
+        <!-- google font open sans -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <!-- google font josefin sans -->
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300italic,300" rel="stylesheet">
+        <!-- google icons, it's for burger menu-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+
+        <script src="js/script.js" async></script>
 	</head>
 	<body>
-        <!--menu-->
-        <div class="menu">
-            <h1><a href="index.html">mpm project</a></h1>
-            <label for="toggle">&#9776</label>
-            <input type="checkbox" id="toggle"/>
-            <div class="main_nav">
-                <nav>
-                    <ul class="ul">
-                        <li><a href = "#">Projekty</a></li>
-                        <li><a href = "realizacje.html">Realizacje</a></li>
-                        <li><a href = "#">Referencje</a></li>
-                        <li><a href = "#">Kontakt</a></li>
-                    </ul>
-                </nav>
+        <div class="wrapper">
+            <!--top of the site -->
+            <div class="top-not-home-page" >
+                <!--main menu -->
+                <div class="menu" id="menu">
+                    <h1><a href="index.html">MPM PROJECT</a></h1>
+                    <div class="label"><label class="material-icons" for="toggle">menu</label></div>
+                    <input type="checkbox" id="toggle"/>
+                    <div class="wtf">
+                        <nav class="main_nav">
+                            <ul class="ul">
+                                <li><a href = "#">Projekty</a></li>
+                                <li><a href = "realizacje.html">Realizacje</a></li>
+                                <li><a href = "#">Referencje</a></li>
+                                <li><a href = "kontakt.html">Kontakt</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="intro">
+                    <div class="h1">
+                            <h1>MPM PROJECT</h1>
+                            <p>KONSTRUKCJE Z DREWNA KLEJONEGO</p>
+                    </div>
+                </div>
             </div>
+            <!--content-->
+            <div class="contact-content">
+                <div class="contact">
+                    <header>MPM PROJECT Spółka z ograniczoną odpowiedzialnością sp.k.</header>
+                    <p>ul. Chopina 32/3</p>
+                    <p>30-049 Kraków</p>
+                    <p>Sąd Rejonowy Kraków śródmieście </p>
+                    <p>Wydział XI Gospodarczy KRS 0000297251</p>
+                    <p>NIP: 677-23-05-027 </p>
+                    <p>REGON: 120626984</p>
+                </div>
+                <div class="contact">
+                    <header>Biuro Handlowe</header>
+                    <p>tel. 12 633 02 82</p>
+                    <p>kom. 606 987 067</p>
+                    <p>fax. 12 633 02 82</p>
+                    <p>e-mail: <a href="mailto:ik@mpmproject.pl">ik@mpmproject.pl</a></p>
+                </div>
+                <div class="contact">
+                    <header>Doradztwo Techniczne</header>
+                    <p>tel. 12 633 02 82</p>
+                    <p>kom. 602 17 18 16</p>
+                    <p>fax. 12 633 02 82</p>
+                    <p>e-mail: <a href="mailto:ml@mpmproject.pl">ml@mpmproject.pl</a></p>
+                </div>
+                <div class="contact">
+                    <header>Biuro Konstrukcyjne</header>
+                    <p>tel/fax. 12 633 02 82</p>
+                    <p>e-mail: <a href="mailto:biuro@mpmproject.pl">biuro@mpmproject.pl</a></p>
+                </div>
+            </div>
+            <!--footer-->
+            <footer>
+                <div>
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href = "#">projekty</a></li>
+                            <li><a href = "#">realizacje</a></li>
+                            <li><a href = "#">referencje</a></li>
+                            <li><a href = "#">kontakt</a></li>
+                        </ul>
+                    </nav>
+                    <span><p>us &copy; 2018</p></span>
+                </div>
+            </footer>
         </div>
-        <!--content-->
-        <div class="contact-content">
-            <div class="contact">
-                <header>MPM PROJECT Spółka z ograniczoną odpowiedzialnością sp.k.</header>
-                <p>ul. Chopina 32/3</p>
-                <p>30-049 Kraków</p>
-                <p>Sąd Rejonowy Kraków śródmieście </p>
-                <p>Wydział XI Gospodarczy KRS 0000297251</p>
-                <p>NIP: 677-23-05-027 </p>
-                <p>REGON: 120626984</p>
-            </div>
-            <div class="contact">
-                <header>Biuro Handlowe</header>
-                <p>tel. 12 633 02 82</p>
-                <p>kom. 606 987 067</p>
-                <p>fax. 12 633 02 82</p>
-                <p>e-mail: <a href="mailto:ik@mpmproject.pl">ik@mpmproject.pl</a></p>
-            </div>
-            <div class="contact">
-                <header>Doradztwo Techniczne</header>
-                <p>tel. 12 633 02 82</p>
-                <p>kom. 602 17 18 16</p>
-                <p>fax. 12 633 02 82</p>
-                <p>e-mail: <a href="mailto:ml@mpmproject.pl">ml@mpmproject.pl</a></p>
-            </div>
-            <div class="contact">
-                <header>Biuro Konstrukcyjne</header>
-                <p>tel/fax. 12 633 02 82</p>
-                <p>e-mail: <a href="mailto:biuro@mpmproject.pl">biuro@mpmproject.pl</a></p>
-            </div>
-        </div>
-        <!--footer-->
-        <footer>
-            <div>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href = "#">projekty</a></li>
-                        <li><a href = "#">realizacje</a></li>
-                        <li><a href = "#">referencje</a></li>
-                        <li><a href = "#">kontakt</a></li>
-                    </ul>
-                </nav>
-                <span><p>us &copy; 2018</p></span>
-            </div>
-        </footer>
     </body>
 </html>
