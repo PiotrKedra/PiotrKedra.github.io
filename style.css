@@ -236,6 +236,7 @@ footer div{
     background-color: #666;
     justify-items: center;
     display: grid;
+
 }
 
 .footer-nav{
@@ -246,8 +247,12 @@ footer div{
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     justify-items: center;
+    padding: 0;
+}
+
+.footer-nav ul li{
 }
 
 .footer-nav ul a{
@@ -272,7 +277,7 @@ footer span p{
     color: #666;
 }
 
-label{
+.label{
     display: none;
 }
 
@@ -297,8 +302,8 @@ label{
         margin-top: 70px;
     }
 
-    label{
-        display: block;  
+    .label{
+        display: inline-block;  
         font-size: 2rem;
         color: white;
         cursor: pointer;
@@ -350,7 +355,7 @@ label{
         width: 90%;
     }
     .intro p{
-        font-size: 3.1vw;
+        font-size: 3.5vw;
         padding: 0 1rem;
     }
 

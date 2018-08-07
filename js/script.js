@@ -1,4 +1,5 @@
 window.onload = function(){
+
     window.onscroll = function(){
         var menu = document.getElementById("menu");
 
