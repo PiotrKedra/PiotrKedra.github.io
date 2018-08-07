@@ -3,12 +3,12 @@
     --primary: #efffff;
     --light: #fff;
     --shadow: 0 1px 5px rgba(104,104,104,0.8);
-    --text-shadow: 0 0 1px rgba(255,255,255,1);
+    --text-shadow: 0 0 1px rgba(255,255,255,0);
     --content-shadow: 0 0 2px rgba(0,0,0,1);
 }
 
 html{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Josefin Sans', 'Open Sans', sans-serif;
 }
 
 body{
@@ -22,30 +22,39 @@ body{
 }
 
 .top{
-    background-image: url('images/baz-rdy-2.png');
-    display: grid;
+    background-image: url('images/baz-rdy-22.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 /*main menu*/
 
 .menu{
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu-scrool{
+    background-color: rgba(33,33,33,0.8);
 }
 
 .menu h1 a{
     text-decoration: none;
     color: var(--light);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-left: 2rem;
     white-space: nowrap;
     text-shadow: var(--text-shadow);
+    opacity: 0;
 }
 
 .wtf{
     padding-right: 1rem;
+    padding-top: 0.4rem;
 }
 
 .ul{
@@ -67,7 +76,7 @@ body{
 .main_nav a:after{
     content: '';
     width: 0;
-    height: 1.2px;
+    height: 1px;
     display: block;
     background: white;
     transition: 500ms ease-in-out;
@@ -80,13 +89,31 @@ body{
 /*intro with logo*/
 
 .intro{
+    margin-top: 4rem;
     display: grid;
     justify-items: center;
+    z-index: 10;
 }
 
-.intro img{
-    padding: 1rem;
-    width: 60%
+.intro .h1{
+    margin: 2rem 0;
+    font-size: 4vw;
+    color: var(--light);
+    text-align: center;
+}
+
+.intro .h1 h1{
+    margin: 0;
+}
+
+.intro .h1 p{
+    border-bottom: 1px solid var(--light);
+    margin: 0;
+    font-size: 2vw;
+    letter-spacing: 0.56vw;
+    padding: 0;
+    text-align: justify;
+    transition: 500ms;
 }
 
 .intro_text{
@@ -103,7 +130,7 @@ body{
 }
 
 .intro_text hr{
-    height: 2px;
+    height: 1px;
     background-color: white;
     border: none;
 }
@@ -121,6 +148,7 @@ body{
     width: 350px;
     box-shadow: var(--shadow);
     position: relative;
+    margin-top: 1rem;
 }
 
 .content header{
@@ -149,7 +177,6 @@ body{
 
 .content-a img{
     grid-area: img-a;
-    padding-top: 1rem;
 }
 
 /*content b*/
@@ -172,7 +199,6 @@ body{
 
 .content-b img{
     grid-area: img-b;
-    padding-top: 1rem;
 }
 
 /*content c*/
@@ -195,7 +221,6 @@ body{
 
 .content-c img{
     grid-area: img-c;
-    padding-top: 1rem;
 }
 
 /*footer*/
@@ -254,43 +279,69 @@ label{
 }
 
 
-@media screen and (max-width: 700px){
-    label{
+@media screen and (max-width: 850px){
+
+    .top{
+        background-color: #333;
+        background-image: none;
         display: block;
-        margin-right: 10%;
-        margin-top: 1rem;
+    }
+
+    .intro{
+        background-image: url('images/baz-rdy-22.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin-top: 70px;
+    }
+
+    label{
+        display: block;  
         font-size: 2rem;
         color: white;
         cursor: pointer;
-        text-align: right;
+        text-align: center;
     }
     
+    .menu{
+        background-color: rgba(33,33,33,0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .menu h1{
-        width: 70%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu h1 a{
+        padding: 0;
+        margin: 0;
     }
     
     .wtf{
-        position: absolute;
-        left: -5%;
-        top:4rem;
+        padding: 0;
+        margin: 0;
         display: none;
         background-color: rgba(33,33,33,0.8);
     }
     .ul{
-        border-right: 1px solid white;
         text-align: center;
         display: block;
+        margin: 0;
+        padding: 0;
     }
     
     .menu nav ul li{
-                border-top: 1px solid white;
-        padding: 0.3rem 0;
+        width: 100%;
+        border-top: 1px solid white;
+        padding: 0.5rem 0;
+
     }
     
     #toggle:checked + .wtf {
         width: 100%;
         display: block;
-
     }
     
     .intro_text{
