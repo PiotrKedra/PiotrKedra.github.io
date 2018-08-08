@@ -38,9 +38,9 @@ body{
     z-index: 100;
 }
 
-.menu-scrool{
+/* .menu-scrool{
     background-color: rgba(33,33,33,0.8);
-}
+} */
 
 .menu h1 a{
     text-decoration: none;
@@ -60,7 +60,7 @@ body{
 .ul{
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 2rem;
 }
 
@@ -92,6 +92,11 @@ body{
     justify-items: center;
     z-index: 10;
     margin-bottom: 2rem;
+}
+
+.intro a{
+    text-decoration: none;
+    color: var(--light);
 }
 
 .intro .h1{
@@ -233,7 +238,7 @@ footer div{
 .footer-nav ul{
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 1rem;
     justify-items: center;
     padding: 0;
@@ -272,7 +277,7 @@ footer span p{
 .top-not-home-page{
     background-image: url('images/baz-rdy-22.png');
     background-attachment: fixed;
-    min-height: 15rem;
+    min-height: 10rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -280,7 +285,7 @@ footer span p{
 /*######## REALIZACJE ########*/
 /*section befor content*/
 .realizacje-text{
-    margin: 3rem 12.5% 0 12.5%;
+    margin: 1rem 6% 0 6%;
 }
 
 .realizacje-text h1{
@@ -294,16 +299,13 @@ footer span p{
 .realizacje-content{
     display: grid;
     grid-template: repeat(3, [row] auto) / repeat(4, [col] auto);
-    margin: 0 12.5%;
+    margin: 0 6%;
     grid-column-gap: 10%;
-    border: 1px solid red;
 }
 
 .img-a{
     grid-column: col 1/span 2;
     grid-row: row 1;
-    border: 1px solid red;
-    column-width: 200px;
 }
 .img-b{
     grid-column: col 3/span 2;
@@ -354,7 +356,6 @@ footer span p{
 }
 
 .realizacje-content div{
-    min-width: 300px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -381,17 +382,11 @@ header{
 
     /* it's change transparent menu into burger menu above intro (still position; fixed;) */
     .top{
-        background-color: #333;
-        background-image: none;
+        background-image: url('images/baz-rdy-22.png');        
         display: block;
-    }
-
-    .intro{
-        background-image: url('images/baz-rdy-22.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        margin-top: 70px;
     }
 
     .label{
@@ -403,7 +398,6 @@ header{
     }
     
     .menu{
-        background-color: rgba(33,33,33,0.9);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -490,9 +484,16 @@ header{
 
     .realizacje-content{
         display: block;
+        width: 90%;
     }
-        
+
     .realizacje-content p{
         font-size: 5vw;
+    }
+
+    /*######## CONTACT ########*/
+    .contact-content{
+        margin-left: 6%;
+        margin-right: 6%;
     }
 }

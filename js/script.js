@@ -24,14 +24,8 @@ window.onload = function(){
             intro_h1.style.opacity = "1";
             intro_h1.style.transition = "500ms";
 
-            if(window.innerWidth > 850){
-                menu.style.backgroundColor = "rgba(51,51,51,0)";
-                menu.style.transition = "500ms";
-            }else{
-                menu.style.backgroundColor = "rgba(51,51,51,1)";
-                menu.style.transition = "500ms";
-            }
-
-        }
+            menu.style.backgroundColor = "rgba(51,51,51,0)";
+            menu.style.transition = "500ms";
+        };
     };
 };
